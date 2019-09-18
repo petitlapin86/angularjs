@@ -8,18 +8,20 @@
     <body ng-app="app" ng-controller="MainController as main">
       <h2>ToDo List</h2>
       <hr />
-      <form>
+
+      <!--add a task-->
+      <form> <!--get input from name input box and store in newtask object as name-->
         <h3>New Task:</h3>
         Name:<input type="text" ng-model="newtask.name" />
         <input type="submit" ng-click="main.add(newtask)" value="Add Task" />
       </form>
       <hr />
+      <!--delete takes a task on click-->
       <ul>
         <li ng-repeat="task in main.tasks">
-          <input type="checkbox" ng-model="task.done" ng-click="main.delete(task)" /> 
+          <input type="checkbox" ng-model="task.done" ng-click="main.delete(task)" />
           <span>{{task.name}}</span>
         </li>
       </ul>
     </body>
 </html>
-

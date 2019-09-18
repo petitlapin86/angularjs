@@ -1,5 +1,5 @@
 angular.module('app', []).controller("MainController", function() {
-  
+
   this.tasks = [
       {
           name: "Go to grocery",
@@ -14,16 +14,19 @@ angular.module('app', []).controller("MainController", function() {
           done: false
       }
   ];
-  
+
+  //this is a add function
   this.add = function(newtask) {
     console.log("adding task: " + newtask.name);
-    var task = {};
-    task.name = newtask.name;
+    var task = {}; // create an empty object
+    task.name = newtask.name; //define a newtask called name
     task.done = false;
-    this.tasks.push(task);
-    newtask.name = "";
+    this.tasks.push(task); //push to task object array
+    newtask.name = ""; //make form blank at the end so that input box clears
   };
-  
+
+//this is a delete function assigning a property to an anonymous function
+//iterate through array of tasks and splice it from the array
   this.delete = function(task) {
     console.log("deleting task: " + task.name);
     for (var i =0; i < this.tasks.length; i++) {
@@ -32,6 +35,6 @@ angular.module('app', []).controller("MainController", function() {
         break;
       }
    }
-    
+
   };
 });
