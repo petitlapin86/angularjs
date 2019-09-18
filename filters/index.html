@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js">
+        </script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-app="app" ng-controller="MainController as main">
+      <h2>Contact List</h2>
+      <hr />
+      <!--make up a name for the model in this case searchfor-->
+      <!--searchfor is now whatever the user inputs in the box-->
+      <label>Search for: <input type="text" ng-model="searchfor" /></label>
+      <!--filter is going to filter everything out other than searchfor-->
+      <!--filters only work with entire arrays-->
+      <div ng-repeat="person in main.people | filter:searchfor"> <!--filter is great for searching-->
+        <p>{{person.name}}<br />
+           {{person.phone}}</p>
+      </div>
+
+    </body>
+</html>
