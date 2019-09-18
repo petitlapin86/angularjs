@@ -5,6 +5,7 @@
     </script>
     <script src="app.js"></script>
   </head>
+  <!--line 9 we are declaring an angular controller-->
   <body ng-app="app" ng-controller="MainController as main">
     <div>
       <label>First number:</label>
@@ -12,6 +13,7 @@
       <label>Second number:</label>
       <input type="number" ng-model="main.num2" />
       <hr>
+      <!--binding numbers from html TO app.js (main) also from app.js TO html-->
       <h1>{{main.num1}} + {{main.num2}} = {{main.num1 + main.num2}}</h1>
       <h1>{{main.num1}} * {{main.num2}} = {{main.num1 * main.num2}}</h1>
     </div>

@@ -5,11 +5,11 @@
         </script>
         <script src="app.js"></script>
     </head>
-    <body ng-app="app" ng-controller="MainController as main">
+    <body ng-app="app" ng-controller="MainController as main"> <!--connecting to controller app.js-->
       <h2>ToDo List</h2>
       <ul>
-        <li ng-repeat="task in main.tasks">
-          <input type="checkbox" ng-model="task.done" /> {{task.name}}
+        <li ng-repeat="task in main.tasks"> <!--in is an iterator or enumerator you can think of it as a for each loop-->
+          <input type="checkbox" ng-model="task.done" /> {{task.name}} <!--for each task in app.js create a checkbox-->
         </li>
       </ul>
     </body>
