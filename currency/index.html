@@ -11,7 +11,7 @@
       <!--creating a table and applying the currency filter onto price-->
       <div ng-repeat="item in main.items">
         <table><tr>
-          <td>{{item.name | uppercase}}</td>
+          <td>{{item.name | uppercase}}</td> <!--this will change the items to uppercase-->
           <td>{{item.price | currency}}</td>
         </tr></table>
       </div>

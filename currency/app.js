@@ -1,5 +1,6 @@
 angular.module('app', []).controller("MainController", function() {
-  
+
+  //purposely trying currency filter on different types of input
   this.items = [
       {
         name: "Book",
@@ -19,8 +20,8 @@ angular.module('app', []).controller("MainController", function() {
       },
       {
         name: "Wisdom",
-        price: "Priceless"
+        price: "Priceless" //currency cannot read a string as a number so nothing is displayed 
       },
-  ];  
-  
+  ];
+
 });
